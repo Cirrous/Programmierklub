@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ssr: false,
 
   app: {
-    baseURL: "/",
+    baseURL: "/Programmierklub/",
   },
 
   nitro: {

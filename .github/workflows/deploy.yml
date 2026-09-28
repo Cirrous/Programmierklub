@@ -13,15 +13,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 26
+          bun-version: latest
 
       - name: Install dependencies & Generate
         run: |
-          npm ci
-          npm run generate
+          bun install
+          bun run generate
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
